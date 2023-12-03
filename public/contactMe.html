@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Contact Me</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js"></script>
+    </head>
+
+    <body>
+        <div id="navigation">
+            <div id="expand">
+                <h1>&plus;</h1>
+            </div>
+            <ul id="main-items" class="hide-small">
+                <a href="index.html"><li id="home-tab" class="nav">Home</li></a>
+                <a href="resume.html"><li id="resume-tab" class="nav">Resume</li></a>
+                <a href="exampleCode.html"><li id="ex-code-tab" class="nav">Example Code</li></a>
+                <a href="codeProjects.html"><li id="code-proj-tab" class="nav">Coding Projects</li></a>
+                <a href="contactMe.html"><li id="contact-tab" class="nav">Contact Me</li></a>
+            </ul>
+        </div>
+        <div id="contact-content">
+            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="72715b0f-4961-4dad-89e2-8dab16774645"/>
+
+                <p class="columns">
+                    <label for="txt-name">Name:</label>
+                    <input id="txt-name" type="text" name="name" required/>
+                </p>
+                <p class="columns">
+                    <label for="email">Email:</label>
+                    <input id="email" type="email" name="email" required/>
+                </p>
+                <p class="columns">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </p>
+
+                <input type="hidden" name="redirect" value="https://web3forms.com/success"/>
+                <input type="hidden" name="subject" value="Contact from my website"/>
+                <input type="hidden" name="from_name" value="My Website"/>
+
+                <button id="send-button" type="submit">Submit</button>
+                <p id="confirmation"></p>
+            </form>
+        </div>
+        <script src="contactme.js"></script>
+    </body>
+</html>

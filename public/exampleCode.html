@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Java Code</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="script.js"></script>
+    </head>
+
+    <body>
+        <div id="navigation">
+            <div id="expand">
+                <h1>&plus;</h1>
+            </div>
+            <ul id="main-items" class="hide-small">
+                <a href="index.html"><li id="home-tab" class="nav">Home</li></a>
+                <a href="resume.html"><li id="resume-tab" class="nav">Resume</li></a>
+                <a href="exampleCode.html"><li id="ex-code-tab" class="nav">Example Code</li></a>
+                <a href="codeProjects.html"><li id="code-proj-tab" class="nav">Coding Projects</li></a>
+                <a href="contactMe.html"><li id="contact-tab" class="nav">Contact Me</li></a>
+            </ul>
+        </div>
+        <div class="code-content">
+            <a href="#" id="add-link">&plus;</a>
+            <div id="code-style"></div>
+            <div id="add-edit-code" class="dialog transparent">
+                <span class="close">&times;</span>
+
+                <h3 id="add-title">Code</h3>
+                <form id="add-code-form" class="add-code" method="POST" enctype="multipart/form-data">
+                    <div>
+                        <input type="hidden" name="_id" value="-1" />
+                        <p class="columns">
+                            <label for="language">Language:</label>
+                            <input type="text" id="language" name="language" required/>
+                        </p>
+                        <p class="columns">
+                            <label for="description">Description:</label>
+                            <input type="text" id="description" name="description" required/>
+                        </p>
+                        <p class="columns">
+                            <label for="ink">Link to Code:</label>
+                            <input type="url" id="link" name="link" required/>
+                        </p>
+                        <p class="columns">
+                            <label for="img">Upload Image:</label>
+                            <input id="upload" type="file" id="img" name="img" />
+                        </p>
+                        
+                    </div>
+                    <div id="add-code-button">
+                        <button type="submit" id="add-button">Add Code</button>
+                    </div>
+
+                    <p id="code-result"></p>
+                </form>
+            </div>
+        </div>
+        <script src="addcode.js"></script>
+    </body>
+</html>
