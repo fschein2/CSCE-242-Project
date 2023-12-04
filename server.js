@@ -86,7 +86,7 @@ const updateCode = async (req, res) => {
     }
 
     const result = await Code.updateOne({_id: req.params.id}, fieldsToUpdate);
-    const soda = await Code.findById(req.params.id);
+    const code = await Code.findById(req.params.id);
     res.send(code);
 };
 
@@ -97,7 +97,7 @@ app.delete("/api/codes/:id", upload.single("img"), (req, res) => {
 const removeCode = async (res, id) => {
     const code = await Code.findByIdAndDelete(id);
     res.send(code);
-}
+};
 
 const validateCode = (code) => {
     const schema = Joi.object({

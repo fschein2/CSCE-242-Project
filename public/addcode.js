@@ -18,10 +18,6 @@ const showCode = async () => {
 const getCodeItem = (code) => {
     const div = document.createElement("div");
 
-    const h1 = document.createElement("h1");
-    div.append(h1);
-    h1.innerHTML = `Language: ${code.language}`;
-
     const dLink = document.createElement("a");
     dLink.innerHTML = "	&#x2715;";
     div.append(dLink);
@@ -31,6 +27,10 @@ const getCodeItem = (code) => {
     eLink.innerHTML = "&#9998;";
     div.append(eLink);
     eLink.id = "edit-link";
+
+    const h1 = document.createElement("h1");
+    div.append(h1);
+    h1.innerHTML = `Language: ${code.language}`;
 
     const img = document.createElement("img");
     div.append(img);

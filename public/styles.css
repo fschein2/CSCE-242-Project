@@ -191,7 +191,7 @@ body {
 #code-style img {
     width: 300px;
     height: 150px;
-    border: 2px solid black;
+    border: 2px solid var(--backColor);
     border-radius: 5px;
 }
 
@@ -217,11 +217,31 @@ body {
     margin: auto;
 }
 
+#add-edit-code {
+    background-color: var(--hoverColor);
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    border: 2px solid var(--borderColor);
+    border-radius: 5px;
+    max-width: 500px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+#add-title {
+    padding-left: 40px;
+}
+
 input[type="url"] {
     background-color: var(--tabColor);
     color: var(--textColor2);
     border: 2px solid var(--borderColor);
     border-radius: 3px;
+}
+
+input[type="file"] {
+    width: 200px;
 }
 
 #code-image {
@@ -267,17 +287,10 @@ input[type="url"] {
 
 .close:hover,
 .close:focus {
-    color: var(--hoverColor);
+    color: var(--textColor1);
     text-decoration: none;
     cursor: pointer;
 }
-
-/*
-#add-code-form {
-    background-color: var(--hoverColor);
-    padding: 10px;
-}
-*/
 
 /* Coding Projects */
 
