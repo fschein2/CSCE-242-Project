@@ -82,7 +82,7 @@ const updateCode = async (req, res) => {
     };
 
     if (req.file) {
-        code.img = "images/" + req.file.filename;
+        fieldsToUpdate.img = "images/" + req.file.filename;
     }
 
     const result = await Code.updateOne({_id: req.params.id}, fieldsToUpdate);

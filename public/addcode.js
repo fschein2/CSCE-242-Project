@@ -9,7 +9,7 @@ const getCodes =async() => {
 const showCode = async () => {
     const codeList = await getCodes();
     const codeDiv = document.getElementById("code-style");
-
+    codeDiv.innerHTML = "";
     codeList.forEach((code) => {
         codeDiv.append(getCodeItem(code));
     });
@@ -96,7 +96,7 @@ const addEditSoda = async(e) => {
     const form = document.getElementById("add-code-form");
     const formData = new FormData(form);
     let response;
-
+    
     if (form._id.value == -1) {
         formData.delete("_id");
         console.log(...formData);
@@ -112,35 +112,7 @@ const addEditSoda = async(e) => {
             body: formData
         });
     }
-/*
-    let i = 0;
 
-    if (response.status != 200) {
-        const errorMessage = setInterval( () => {
-            const resultDiv = document.getElementById("result");
-            resultDiv.innerHTML = "Failed to post code";
-            i++;
-            if (i > 3) {
-                resultDiv.innerHTML = "";
-                clearInterval(errorMessage);
-            }
-
-        }, 1000);
-    }
-
-    if (response.status = 200) {
-        const successMessage = setInterval( () => {
-            const resultDiv = document.getElementById("result");
-            resultDiv.innerHTML = "Successfully posted code";
-            i++;
-            if (i > 3) {
-                resultDiv.innerHTML = "";
-                clearInterval(successMessage);
-            }
-
-        }, 1000);
-    }
-*/
     code = await response.json();
 
     resetForm();
@@ -151,7 +123,7 @@ const addEditSoda = async(e) => {
 const resetForm = () => {
     const form = document.getElementById("add-code-form");
     form.reset();
-    form._id = "-1";
+    form._id.value = "-1";
 };
 
 const showHideAdd = (e) => {

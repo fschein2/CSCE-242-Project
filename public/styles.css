@@ -275,6 +275,14 @@ input[type="file"] {
     cursor: pointer;
 }
 
+#edit-link:hover {
+   color: #000000;
+}
+
+#delete-link:hover {
+    color: #000000;
+}
+
 /* The Close Button */
 
 .close {
